@@ -1,0 +1,29 @@
+<div class="rss">
+    <h1 class="rss--title">Entrer le lien de votre flux RSS</h1>
+
+    <form #rssForm="ngForm" (ngSubmit)="onSubmit()" class="rss--form">
+        <input type="text" [(ngModel)]="link" name="link" #name="ngModel" required placeholder="Flux RSS" class="rss--input">
+        <br>
+        <button class="rss--submit">Envoyer</button>
+    </form>
+</div>
+
+<hr *ngIf="feed.feed !== undefined" />
+
+<h1 *ngIf="feed.feed !== undefined" class="feed--title">{{ feed.feed.title }}</h1>
+
+<section *ngFor="let item of feed.items" class="item" (click)="open(item.link)">
+    <header>
+        <h3 class="item--title">{{ item.title }}</h3>
+
+        <div class="item--meta">
+            <span class="item--author">{{ item.author }}</span> - <span class="item--date">{{ item.pubDate }}</span>
+        </div>
+    </header>
+
+    <div class="item--thumb" *ngIf="item.thumbnail !== undefined && item.thumbnail !== ''">
+        <img [src]="item.thumbnail" [alt]="item.title">
+    </div>
+
+    <!-- <p class="item--content" [innerHtml]="item.content"></p> -->
+</section>

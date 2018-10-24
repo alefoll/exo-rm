@@ -1,0 +1,84 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F9F9FA;
+    font-family: "Segoe UI", "San Francisco", "Ubuntu", "Fira Sans", "Roboto";
+    font-weight: 400;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 12px 0;
+}
+
+button {
+    font-size: 13px;
+    height: 32px;
+    padding: 8px;
+    border-radius: 2px;
+    background-color: #0060df;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    min-width: 132px;
+    flex-shrink: 0;
+}
+
+button.big {
+    height: 48px;
+    width: auto;
+    min-width: 0px;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+button.mini {
+    height: 24px;
+    width: auto;
+    min-width: 0px;
+    font-size: 11px;
+    padding: 0 8px;
+}
+
+button:hover {
+    background-color: #003eaa;
+}
+
+button:active {
+    background-color: #002275;
+}
+
+button.error {
+    background-color: #d70022;
+}
+
+button.error:hover {
+    background-color: #a4000f;
+}
+
+button.error:active {
+    background-color: #5a0002;
+}
+
+input {
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid #B7B7B7;
+    font-family: "Segoe UI";
+    height: 12px;
+    padding: 9px;
+    flex: 1 1 auto;
+}
